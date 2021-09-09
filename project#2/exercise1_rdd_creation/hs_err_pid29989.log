@@ -1,0 +1,1617 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002ba6054dceae, pid=29989, tid=0x00002ba604bb0160
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_181-b13) (build 1.8.0_181-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.181-b13 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x92beae]  SR_handler(int, siginfo*, ucontext*)+0x3e
+#
+# Core dump written. Default location: /general/home/msagor/csce678_spark_project/exercise1_rdd_creation/core or core.29989
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000128
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00002ba605f42700, RCX=0xffffffffffffffff, RDX=0x00002ba604bb0480
+RSP=0x00007ffdef189480, RBP=0x00007ffdef189530, RSI=0x00007ffdef189670, RDI=0x0000000000000001
+R8 =0x0000000000000000, R9 =0x00002ba605f42700, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x00007ffdef189540, R13=0x00007ffdef189670, R14=0x00002ba604bb0108, R15=0x0000000000000002
+RIP=0x00002ba6054dceae, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffdef189480)
+0x00007ffdef189480:   0000000000000000 00007ffdef189918
+0x00007ffdef189490:   0000000000000073 0000000000000020
+0x00007ffdef1894a0:   00002ba604412832 00000000000009af
+0x00007ffdef1894b0:   ef18991800000000 0000000a000009af
+0x00007ffdef1894c0:   0000000000007525 0000000000000000
+0x00007ffdef1894d0:   00007ffdef189913 0000000100000000
+0x00007ffdef1894e0:   0000000000000005 00007ffdef189913
+0x00007ffdef1894f0:   0000000000000073 00007ffdef189918
+0x00007ffdef189500:   00007ffdef189964 00002ba605f42700
+0x00007ffdef189510:   00007ffdef189af0 00002ba605f42d28
+0x00007ffdef189520:   00002ba604bb0160 0000000000000001
+0x00007ffdef189530:   00007ffdef189b80 00002ba6041f27e0
+0x00007ffdef189540:   0000000000000001 0000000000000000
+0x00007ffdef189550:   0000000000000000 00007ffd00000002
+0x00007ffdef189560:   0000000000000000 0000000000000000
+0x00007ffdef189570:   00002ba605f42700 0000000000000000
+0x00007ffdef189580:   0000000000000246 00007ffdef189af0
+0x00007ffdef189590:   00002ba605f42d28 00002ba604bb0160
+0x00007ffdef1895a0:   0000000000000001 00002ba605f429d0
+0x00007ffdef1895b0:   0000000000000000 00007ffdef189b80
+0x00007ffdef1895c0:   00002ba605f42700 000000000000754a
+0x00007ffdef1895d0:   00000000000000ca ffffffffffffffff
+0x00007ffdef1895e0:   00007ffdef189ae0 00002ba6041eb2fb
+0x00007ffdef1895f0:   0000000000000246 0000000000000033
+0x00007ffdef189600:   0000000000000000 0000000000000000
+0x00007ffdef189610:   0000000000000000 0000000000000000
+0x00007ffdef189620:   00007ffdef189700 0000000000000004
+0x00007ffdef189630:   00007ffdef1899e0 00002ba6048700da
+0x00007ffdef189640:   0000000200000000 0000000000000100
+0x00007ffdef189650:   0000000000000000 0000000000000001
+0x00007ffdef189660:   0000000000000000 0000000000000000
+0x00007ffdef189670:   000000000000000c 0000003000000000 
+
+Instructions: (pc=0x00002ba6054dceae)
+0x00002ba6054dce8e:   48 81 ec b0 00 00 00 e8 66 48 8f ff 44 8b 38 49
+0x00002ba6054dce9e:   89 c6 48 8b 05 31 8b 65 00 8b 38 e8 02 52 8f ff
+0x00002ba6054dceae:   48 8b 98 28 01 00 00 8b 83 a8 00 00 00 83 e8 01
+0x00002ba6054dcebe:   74 20 45 89 3e 48 8b 5d d8 4c 8b 65 e0 4c 8b 6d 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00002ba605f42700 is pointing into the stack for thread: 0x00002ba608014800
+RCX=0xffffffffffffffff is an unknown value
+RDX=0x00002ba604bb0480 is an unknown value
+RSP=0x00007ffdef189480 is an unknown value
+RBP=0x00007ffdef189530 is an unknown value
+RSI=0x00007ffdef189670 is an unknown value
+RDI=0x0000000000000001 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00002ba605f42700 is pointing into the stack for thread: 0x00002ba608014800
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x00007ffdef189540 is an unknown value
+R13=0x00007ffdef189670 is an unknown value
+R14=0x00002ba604bb0108 is an unknown value
+R15=0x0000000000000002 is an unknown value
+
+
+Stack: [0x00007ffdef098000,0x00007ffdef198000],  sp=0x00007ffdef189480,  free space=965k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x92beae]  SR_handler(int, siginfo*, ucontext*)+0x3e
+C  [libpthread.so.0+0xf7e0]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00002ba608012110] Safepoint_lock - owner thread: 0x00002ba60809a000
+[0x00002ba608012190] Threads_lock - owner thread: 0x00002ba60809a000
+
+Heap:
+ PSYoungGen      total 284672K, used 61089K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 262656K, 22% used [0x00000000eab00000,0x00000000ee3f6718,0x00000000fab80000)
+  from space 22016K, 12% used [0x00000000fc180000,0x00000000fc4320e0,0x00000000fd700000)
+  to   space 22528K, 0% used [0x00000000fab80000,0x00000000fab80000,0x00000000fc180000)
+ ParOldGen       total 489472K, used 19377K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12ec748,0x00000000dde00000)
+ Metaspace       used 39715K, capacity 40190K, committed 40448K, reserved 1083392K
+  class space    used 5731K, capacity 5853K, committed 5888K, reserved 1048576K
+
+Card table byte_map: [0x00002ba61b3c0000,0x00002ba61b5c1000] byte_map_base: 0x00002ba61adc0000
+
+Marking Bits: (ParMarkBitMap*) 0x00002ba605b850a0
+ Begin Bits: [0x00002ba65c000000, 0x00002ba65d000000)
+ End Bits:   [0x00002ba65d000000, 0x00002ba65e000000)
+
+Polling page: 0x00002ba606592000
+
+CodeCache: size=245760Kb used=11290Kb max_used=11296Kb free=234469Kb
+ bounds [0x00002ba60c000000, 0x00002ba60cb20000, 0x00002ba61b000000]
+ total_blobs=4140 nmethods=3591 adapters=458
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1163.383 Thread 0x00002ba6080f1800 4103       1       java.util.concurrent.TimeUnit$1::toNanos (2 bytes)
+Event: 1163.383 Thread 0x00002ba6080f1800 nmethod 4103 0x00002ba60cafc590 code [0x00002ba60cafc6e0, 0x00002ba60cafc7f0]
+Event: 1173.383 Thread 0x00002ba6080f1800 4104       3       java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask::compareTo (9 bytes)
+Event: 1173.383 Thread 0x00002ba6080f1800 nmethod 4104 0x00002ba60cb0f490 code [0x00002ba60cb0f600, 0x00002ba60cb0f8a8]
+Event: 1173.383 Thread 0x00002ba6080f1800 4105       3       java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask::compareTo (101 bytes)
+Event: 1173.384 Thread 0x00002ba6080f1800 nmethod 4105 0x00002ba60cb0e710 code [0x00002ba60cb0e8e0, 0x00002ba60cb0f1e8]
+Event: 1203.383 Thread 0x00002ba6080f1800 4106       1       org.apache.spark.executor.Executor::org$apache$spark$executor$Executor$$conf (5 bytes)
+Event: 1203.383 Thread 0x00002ba6080f1800 nmethod 4106 0x00002ba60cb0e450 code [0x00002ba60cb0e5a0, 0x00002ba60cb0e6b0]
+Event: 1223.383 Thread 0x00002ba6080f1800 4107       3       scala.concurrent.duration.Duration::<init> (9 bytes)
+Event: 1223.383 Thread 0x00002ba6080f1800 nmethod 4107 0x00002ba60cb14850 code [0x00002ba60cb149c0, 0x00002ba60cb14bd0]
+
+GC Heap History (10 events):
+Event: 7.058 GC heap before
+{Heap before GC invocations=4 (full 1):
+ PSYoungGen      total 301568K, used 19989K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258560K, 1% used [0x00000000eab00000,0x00000000eaf12150,0x00000000fa780000)
+  from space 43008K, 36% used [0x00000000fd180000,0x00000000fe0f33d0,0x00000000ffb80000)
+  to   space 43008K, 0% used [0x00000000fa780000,0x00000000fa780000,0x00000000fd180000)
+ ParOldGen       total 440832K, used 15669K [0x00000000c0000000, 0x00000000dae80000, 0x00000000eab00000)
+  object space 440832K, 3% used [0x00000000c0000000,0x00000000c0f4d7d0,0x00000000dae80000)
+ Metaspace       used 34906K, capacity 35082K, committed 35416K, reserved 1079296K
+  class space    used 4981K, capacity 5055K, committed 5120K, reserved 1048576K
+Event: 7.076 GC heap after
+Heap after GC invocations=4 (full 1):
+ PSYoungGen      total 301568K, used 15799K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258560K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fa780000)
+  from space 43008K, 36% used [0x00000000fa780000,0x00000000fb6eddd0,0x00000000fd180000)
+  to   space 43008K, 0% used [0x00000000fd600000,0x00000000fd600000,0x0000000100000000)
+ ParOldGen       total 440832K, used 15677K [0x00000000c0000000, 0x00000000dae80000, 0x00000000eab00000)
+  object space 440832K, 3% used [0x00000000c0000000,0x00000000c0f4f7d0,0x00000000dae80000)
+ Metaspace       used 34906K, capacity 35082K, committed 35416K, reserved 1079296K
+  class space    used 4981K, capacity 5055K, committed 5120K, reserved 1048576K
+}
+Event: 7.076 GC heap before
+{Heap before GC invocations=5 (full 2):
+ PSYoungGen      total 301568K, used 15799K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258560K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fa780000)
+  from space 43008K, 36% used [0x00000000fa780000,0x00000000fb6eddd0,0x00000000fd180000)
+  to   space 43008K, 0% used [0x00000000fd600000,0x00000000fd600000,0x0000000100000000)
+ ParOldGen       total 440832K, used 15677K [0x00000000c0000000, 0x00000000dae80000, 0x00000000eab00000)
+  object space 440832K, 3% used [0x00000000c0000000,0x00000000c0f4f7d0,0x00000000dae80000)
+ Metaspace       used 34906K, capacity 35082K, committed 35416K, reserved 1079296K
+  class space    used 4981K, capacity 5055K, committed 5120K, reserved 1048576K
+Event: 7.157 GC heap after
+Heap after GC invocations=5 (full 2):
+ PSYoungGen      total 301568K, used 0K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258560K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fa780000)
+  from space 43008K, 0% used [0x00000000fa780000,0x00000000fa780000,0x00000000fd180000)
+  to   space 43008K, 0% used [0x00000000fd600000,0x00000000fd600000,0x0000000100000000)
+ ParOldGen       total 489472K, used 19353K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12e6748,0x00000000dde00000)
+ Metaspace       used 34902K, capacity 35076K, committed 35416K, reserved 1079296K
+  class space    used 4981K, capacity 5054K, committed 5120K, reserved 1048576K
+}
+Event: 10.058 GC heap before
+{Heap before GC invocations=6 (full 2):
+ PSYoungGen      total 301568K, used 258560K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 258560K, 100% used [0x00000000eab00000,0x00000000fa780000,0x00000000fa780000)
+  from space 43008K, 0% used [0x00000000fa780000,0x00000000fa780000,0x00000000fd180000)
+  to   space 43008K, 0% used [0x00000000fd600000,0x00000000fd600000,0x0000000100000000)
+ ParOldGen       total 489472K, used 19353K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12e6748,0x00000000dde00000)
+ Metaspace       used 38596K, capacity 38936K, committed 39296K, reserved 1083392K
+  class space    used 5627K, capacity 5724K, committed 5760K, reserved 1048576K
+Event: 10.064 GC heap after
+Heap after GC invocations=6 (full 2):
+ PSYoungGen      total 306176K, used 5006K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 263168K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fac00000)
+  from space 43008K, 11% used [0x00000000fd600000,0x00000000fdae3a58,0x0000000100000000)
+  to   space 43008K, 0% used [0x00000000fac00000,0x00000000fac00000,0x00000000fd600000)
+ ParOldGen       total 489472K, used 19361K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12e8748,0x00000000dde00000)
+ Metaspace       used 38596K, capacity 38936K, committed 39296K, reserved 1083392K
+  class space    used 5627K, capacity 5724K, committed 5760K, reserved 1048576K
+}
+Event: 102.453 GC heap before
+{Heap before GC invocations=7 (full 2):
+ PSYoungGen      total 306176K, used 268174K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 263168K, 100% used [0x00000000eab00000,0x00000000fac00000,0x00000000fac00000)
+  from space 43008K, 11% used [0x00000000fd600000,0x00000000fdae3a58,0x0000000100000000)
+  to   space 43008K, 0% used [0x00000000fac00000,0x00000000fac00000,0x00000000fd600000)
+ ParOldGen       total 489472K, used 19361K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12e8748,0x00000000dde00000)
+ Metaspace       used 39337K, capacity 39782K, committed 39936K, reserved 1083392K
+  class space    used 5727K, capacity 5849K, committed 5888K, reserved 1048576K
+Event: 102.456 GC heap after
+Heap after GC invocations=7 (full 2):
+ PSYoungGen      total 266752K, used 3085K [0x00000000eab00000, 0x00000000fd700000, 0x0000000100000000)
+  eden space 263168K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fac00000)
+  from space 3584K, 86% used [0x00000000fac00000,0x00000000faf03710,0x00000000faf80000)
+  to   space 22016K, 0% used [0x00000000fc180000,0x00000000fc180000,0x00000000fd700000)
+ ParOldGen       total 489472K, used 19369K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12ea748,0x00000000dde00000)
+ Metaspace       used 39337K, capacity 39782K, committed 39936K, reserved 1083392K
+  class space    used 5727K, capacity 5849K, committed 5888K, reserved 1048576K
+}
+Event: 164.773 GC heap before
+{Heap before GC invocations=8 (full 2):
+ PSYoungGen      total 266752K, used 266253K [0x00000000eab00000, 0x00000000fd700000, 0x0000000100000000)
+  eden space 263168K, 100% used [0x00000000eab00000,0x00000000fac00000,0x00000000fac00000)
+  from space 3584K, 86% used [0x00000000fac00000,0x00000000faf03710,0x00000000faf80000)
+  to   space 22016K, 0% used [0x00000000fc180000,0x00000000fc180000,0x00000000fd700000)
+ ParOldGen       total 489472K, used 19369K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12ea748,0x00000000dde00000)
+ Metaspace       used 39562K, capacity 39998K, committed 40192K, reserved 1083392K
+  class space    used 5730K, capacity 5853K, committed 5888K, reserved 1048576K
+Event: 164.778 GC heap after
+Heap after GC invocations=8 (full 2):
+ PSYoungGen      total 284672K, used 2760K [0x00000000eab00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 262656K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000fab80000)
+  from space 22016K, 12% used [0x00000000fc180000,0x00000000fc4320e0,0x00000000fd700000)
+  to   space 22528K, 0% used [0x00000000fab80000,0x00000000fab80000,0x00000000fc180000)
+ ParOldGen       total 489472K, used 19377K [0x00000000c0000000, 0x00000000dde00000, 0x00000000eab00000)
+  object space 489472K, 3% used [0x00000000c0000000,0x00000000c12ec748,0x00000000dde00000)
+ Metaspace       used 39562K, capacity 39998K, committed 40192K, reserved 1083392K
+  class space    used 5730K, capacity 5853K, committed 5888K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 9.997 Thread 0x00002ba78003b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00002ba60c84ccc4 method=org.apache.hadoop.mapred.LineRecordReader.next(Lorg/apache/hadoop/io/LongWritable;Lorg/apache/hadoop/io/Text;)Z @ 38
+Event: 10.147 Thread 0x00002ba78003b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00002ba60c35097c method=org.apache.hadoop.util.LineReader.readDefaultLine(Lorg/apache/hadoop/io/Text;II)I @ 229
+Event: 10.149 Thread 0x00002ba78003b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00002ba60c84b0b8 method=org.apache.hadoop.mapred.LineRecordReader.next(Lorg/apache/hadoop/io/LongWritable;Lorg/apache/hadoop/io/Text;)Z @ 83
+Event: 10.209 Thread 0x00002ba6f8016800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00002ba60c4c9c9c method=org.apache.spark.InterruptibleIterator.next()Ljava/lang/Object; @ 4
+Event: 10.266 Thread 0x00002ba6f8016800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00002ba60c7a0498 method=com.google.common.base.Equivalence$Equals.doHash(Ljava/lang/Object;)I @ 1
+Event: 10.292 Thread 0x00002ba6f8016800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00002ba60c4c9c9c method=org.apache.spark.InterruptibleIterator.next()Ljava/lang/Object; @ 4
+Event: 99.591 Thread 0x00002ba780033800 Uncommon trap: reason=null_check action=maybe_recompile pc=0x00002ba60c344814 method=org.apache.spark.rdd.HadoopRDD$$anon$1.getNext()Lscala/Tuple2; @ 13
+Event: 100.043 Thread 0x00002ba6b8762000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00002ba60c8dbffc method=java.io.ObjectOutputStream$BlockDataOutputStream.writeBytes(Ljava/lang/String;)V @ 22
+Event: 100.088 Thread 0x00002ba780036800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00002ba60c979ef0 method=org.apache.spark.InterruptibleIterator.next()Ljava/lang/Object; @ 4
+Event: 106.215 Thread 0x00002ba78002c800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00002ba60c979ef0 method=org.apache.spark.InterruptibleIterator.next()Ljava/lang/Object; @ 4
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 9.893 Thread 0x00002ba780031800 Exception <a 'java/net/SocketException': Socket closed> (0x00000000f68fd730) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 10.295 Thread 0x00002ba780036800 Implicit null exception at 0x00002ba60c94827f to 0x00002ba60c949964
+Event: 10.295 Thread 0x00002ba780036800 Exception <a 'java/lang/NullPointerException'> (0x00000000ef94a870) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 99.591 Thread 0x00002ba780033800 Implicit null exception at 0x00002ba60c34397f to 0x00002ba60c3447f9
+Event: 100.041 Thread 0x00002ba6b8762000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000f7078c28) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 100.042 Thread 0x00002ba6b8762000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000f708bdb0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 100.048 Thread 0x00002ba6b828a000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000f125e510) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 100.056 Thread 0x00002ba6b828a000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000f13a50b0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 102.638 Thread 0x00002ba780031800 Exception <a 'java/net/SocketException': Socket closed> (0x00000000f05a0488) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 151.086 Thread 0x00002ba78002c800 Exception <a 'java/net/SocketException': Socket closed> (0x00000000f692d790) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u181/11358/hotspot/src/share/vm/prims/jni.cpp, line 735]
+
+Events (10 events):
+Event: 224.822 Thread 0x00002ba700003800 Thread exited: 0x00002ba700003800
+Event: 224.822 Thread 0x00002ba7bc002000 Thread exited: 0x00002ba7bc002000
+Event: 224.884 Thread 0x00002ba6f4001800 Thread exited: 0x00002ba6f4001800
+Event: 624.100 Thread 0x00002ba6b85b2800 DEOPT PACKING pc=0x00002ba60c977c86 sp=0x00002ba663b9f200
+Event: 624.100 Thread 0x00002ba6b85b2800 DEOPT UNPACKING pc=0x00002ba60c047784 sp=0x00002ba663b9eef8 mode 0
+Event: 733.351 Thread 0x00002ba6b85b2800 DEOPT PACKING pc=0x00002ba60c970b1c sp=0x00002ba663b9f1c0
+Event: 733.351 Thread 0x00002ba6b85b2800 DEOPT UNPACKING pc=0x00002ba60c047784 sp=0x00002ba663b9ef10 mode 0
+Event: 763.384 Thread 0x00002ba6080f1800 flushing nmethod 0x00002ba60c3e87d0
+Event: 823.384 Thread 0x00002ba6080eb800 flushing nmethod 0x00002ba60c5fc6d0
+Event: 823.384 Thread 0x00002ba6080eb800 flushing nmethod 0x00002ba60c5fe250
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 00:1a 432509336                          /general/software/x86_64/easybuild/software/JDK/1.8.0_181/bin/java
+00600000-00601000 rw-p 00000000 00:1a 432509336                          /general/software/x86_64/easybuild/software/JDK/1.8.0_181/bin/java
+01325000-015dc000 rw-p 00000000 00:00 0                                  [heap]
+c0000000-dde00000 rw-p 00000000 00:00 0 
+dde00000-eab00000 ---p 00000000 00:00 0 
+eab00000-100000000 rw-p 00000000 00:00 0 
+100000000-1005c0000 rw-p 00000000 00:00 0 
+1005c0000-140000000 ---p 00000000 00:00 0 
+2ba603fc0000-2ba603fe0000 r-xp 00000000 00:12 64451                      /lib64/ld-2.12.so
+2ba603fe0000-2ba603fe2000 rw-p 00000000 00:00 0 
+2ba6041e0000-2ba6041e1000 r--p 00020000 00:12 64451                      /lib64/ld-2.12.so
+2ba6041e1000-2ba6041e2000 rw-p 00021000 00:12 64451                      /lib64/ld-2.12.so
+2ba6041e2000-2ba6041e3000 rw-p 00000000 00:00 0 
+2ba6041e3000-2ba6041fa000 r-xp 00000000 00:12 64183                      /lib64/libpthread-2.12.so
+2ba6041fa000-2ba6043fa000 ---p 00017000 00:12 64183                      /lib64/libpthread-2.12.so
+2ba6043fa000-2ba6043fb000 r--p 00017000 00:12 64183                      /lib64/libpthread-2.12.so
+2ba6043fb000-2ba6043fc000 rw-p 00018000 00:12 64183                      /lib64/libpthread-2.12.so
+2ba6043fc000-2ba604401000 rw-p 00000000 00:00 0 
+2ba604401000-2ba604417000 r-xp 00000000 00:1a 432509156                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/lib/amd64/jli/libjli.so
+2ba604417000-2ba604616000 ---p 00016000 00:1a 432509156                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/lib/amd64/jli/libjli.so
+2ba604616000-2ba604617000 rw-p 00015000 00:1a 432509156                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/lib/amd64/jli/libjli.so
+2ba604617000-2ba604619000 r-xp 00000000 00:12 64441                      /lib64/libdl-2.12.so
+2ba604619000-2ba604819000 ---p 00002000 00:12 64441                      /lib64/libdl-2.12.so
+2ba604819000-2ba60481a000 r--p 00002000 00:12 64441                      /lib64/libdl-2.12.so
+2ba60481a000-2ba60481b000 rw-p 00003000 00:12 64441                      /lib64/libdl-2.12.so
+2ba60481b000-2ba6049a6000 r-xp 00000000 00:12 64299                      /lib64/libc-2.12.so
+2ba6049a6000-2ba604ba5000 ---p 0018b000 00:12 64299                      /lib64/libc-2.12.so
+2ba604ba5000-2ba604ba9000 r--p 0018a000 00:12 64299                      /lib64/libc-2.12.so
+2ba604ba9000-2ba604bab000 rw-p 0018e000 00:12 64299                      /lib64/libc-2.12.so
+2ba604bab000-2ba604bb1000 rw-p 00000000 00:00 0 
+2ba604bb1000-2ba60588d000 r-xp 00000000 00:1a 411253405                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/server/libjvm.so
+2ba60588d000-2ba605a8d000 ---p 00cdc000 00:1a 411253405                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/server/libjvm.so
+2ba605a8d000-2ba605b67000 rw-p 00cdc000 00:1a 411253405                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/server/libjvm.so
+2ba605b67000-2ba605bb2000 rw-p 00000000 00:00 0 
+2ba605bbe000-2ba605c41000 r-xp 00000000 00:12 64158                      /lib64/libm-2.12.so
+2ba605c41000-2ba605e40000 ---p 00083000 00:12 64158                      /lib64/libm-2.12.so
+2ba605e40000-2ba605e41000 r--p 00082000 00:12 64158                      /lib64/libm-2.12.so
+2ba605e41000-2ba605e42000 rw-p 00083000 00:12 64158                      /lib64/libm-2.12.so
+2ba605e42000-2ba605e45000 ---p 00000000 00:00 0 
+2ba605e45000-2ba605f43000 rw-p 00000000 00:00 0 
+2ba605f4f000-2ba605f56000 r-xp 00000000 00:12 64406                      /lib64/librt-2.12.so
+2ba605f56000-2ba606155000 ---p 00007000 00:12 64406                      /lib64/librt-2.12.so
+2ba606155000-2ba606156000 r--p 00006000 00:12 64406                      /lib64/librt-2.12.so
+2ba606156000-2ba606157000 rw-p 00007000 00:12 64406                      /lib64/librt-2.12.so
+2ba606157000-2ba606164000 r-xp 00000000 00:1a 432507823                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libverify.so
+2ba606164000-2ba606364000 ---p 0000d000 00:1a 432507823                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libverify.so
+2ba606364000-2ba606366000 rw-p 0000d000 00:1a 432507823                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libverify.so
+2ba606366000-2ba606391000 r-xp 00000000 00:1a 432507818                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libjava.so
+2ba606391000-2ba606590000 ---p 0002b000 00:1a 432507818                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libjava.so
+2ba606590000-2ba606592000 rw-p 0002a000 00:1a 432507818                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libjava.so
+2ba606592000-2ba606593000 ---p 00000000 00:00 0 
+2ba606593000-2ba606594000 rw-p 00000000 00:00 0 
+2ba606594000-2ba60659c000 rw-s 00000000 00:14 70782222                   /tmp/hsperfdata_msagor/29989
+2ba6065a0000-2ba6065ad000 r-xp 00000000 00:12 64215                      /lib64/libnss_files-2.12.so
+2ba6065ad000-2ba6067ac000 ---p 0000d000 00:12 64215                      /lib64/libnss_files-2.12.so
+2ba6067ac000-2ba6067ad000 r--p 0000c000 00:12 64215                      /lib64/libnss_files-2.12.so
+2ba6067ad000-2ba6067ae000 rw-p 0000d000 00:12 64215                      /lib64/libnss_files-2.12.so
+2ba6067ae000-2ba6067c9000 r-xp 00000000 00:1a 433363489                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libzip.so
+2ba6067c9000-2ba6069c9000 ---p 0001b000 00:1a 433363489                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libzip.so
+2ba6069c9000-2ba6069ca000 rw-p 0001b000 00:1a 433363489                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libzip.so
+2ba608000000-2ba608e6f000 rw-p 00000000 00:00 0 
+2ba608e6f000-2ba60c000000 ---p 00000000 00:00 0 
+2ba60c000000-2ba60cb20000 rwxp 00000000 00:00 0 
+2ba60cb20000-2ba61b000000 ---p 00000000 00:00 0 
+2ba61b000000-2ba61b02d000 rw-p 00000000 00:00 0 
+2ba61b02d000-2ba61b3c0000 ---p 00000000 00:00 0 
+2ba61b3c0000-2ba61b4af000 rw-p 00000000 00:00 0 
+2ba61b4af000-2ba61b515000 ---p 00000000 00:00 0 
+2ba61b515000-2ba61b5c0000 rw-p 00000000 00:00 0 
+2ba61b5c0000-2ba61b6b0000 rw-p 00000000 00:00 0 
+2ba61b6b0000-2ba61b717000 ---p 00000000 00:00 0 
+2ba61b717000-2ba61b718000 ---p 00000000 00:00 0 
+2ba61b718000-2ba61b818000 rw-p 00000000 00:00 0 
+2ba61b818000-2ba61b819000 ---p 00000000 00:00 0 
+2ba61b819000-2ba61b919000 rw-p 00000000 00:00 0 
+2ba61b919000-2ba61b91a000 ---p 00000000 00:00 0 
+2ba61b91a000-2ba61ba1a000 rw-p 00000000 00:00 0 
+2ba61ba1a000-2ba61ba1b000 ---p 00000000 00:00 0 
+2ba61ba1b000-2ba61bb1b000 rw-p 00000000 00:00 0 
+2ba61bb1b000-2ba61bb1c000 ---p 00000000 00:00 0 
+2ba61bb1c000-2ba61bc1c000 rw-p 00000000 00:00 0 
+2ba61bc1c000-2ba61bc1d000 ---p 00000000 00:00 0 
+2ba61bc1d000-2ba61bd1d000 rw-p 00000000 00:00 0 
+2ba61bd1d000-2ba61bd1e000 ---p 00000000 00:00 0 
+2ba61bd1e000-2ba61be1e000 rw-p 00000000 00:00 0 
+2ba61be1e000-2ba61be1f000 ---p 00000000 00:00 0 
+2ba61be1f000-2ba61bf1f000 rw-p 00000000 00:00 0 
+2ba61bf1f000-2ba61bf20000 ---p 00000000 00:00 0 
+2ba61bf20000-2ba61c020000 rw-p 00000000 00:00 0 
+2ba61c020000-2ba61c021000 ---p 00000000 00:00 0 
+2ba61c021000-2ba61c121000 rw-p 00000000 00:00 0 
+2ba61c121000-2ba61c122000 ---p 00000000 00:00 0 
+2ba61c122000-2ba61c222000 rw-p 00000000 00:00 0 
+2ba61c222000-2ba61c223000 ---p 00000000 00:00 0 
+2ba61c223000-2ba61c323000 rw-p 00000000 00:00 0 
+2ba61c323000-2ba61c324000 ---p 00000000 00:00 0 
+2ba61c324000-2ba61c424000 rw-p 00000000 00:00 0 
+2ba61c424000-2ba61c425000 ---p 00000000 00:00 0 
+2ba61c425000-2ba61c525000 rw-p 00000000 00:00 0 
+2ba61c525000-2ba61c526000 ---p 00000000 00:00 0 
+2ba61c526000-2ba61c626000 rw-p 00000000 00:00 0 
+2ba61c626000-2ba61c629000 ---p 00000000 00:00 0 
+2ba61c629000-2ba61c727000 rw-p 00000000 00:00 0 
+2ba61c727000-2ba61c728000 ---p 00000000 00:00 0 
+2ba61c728000-2ba61c828000 rw-p 00000000 00:00 0 
+2ba61c828000-2ba61c834000 r--s 000b6000 00:1a 431695748                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/zookeeper-3.4.6.jar
+2ba61c834000-2ba61c837000 r--s 00019000 00:1a 431695749                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/bonecp-0.8.0.RELEASE.jar
+2ba61c837000-2ba61c83b000 r--s 00025000 00:1a 431695750                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/antlr-runtime-3.4.jar
+2ba61c83b000-2ba61c847000 r--s 0009d000 00:1a 431695751                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-common-2.6.5.jar
+2ba61c847000-2ba61c87e000 r--s 00325000 00:1a 431695752                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/calcite-core-1.2.0-incubating.jar
+2ba61c87e000-2ba61c880000 r--s 00003000 00:1a 431695753                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/JavaEWAH-0.3.2.jar
+2ba61c880000-2ba61c88e000 r--s 0009d000 00:1a 431695754                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-common-2.22.2.jar
+2ba61c88e000-2ba61c894000 r--s 0002c000 00:1a 431695755                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jdo-api-3.0.1.jar
+2ba61c894000-2ba61c8a3000 r--s 0009f000 00:1a 431695756                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/guice-3.0.jar
+2ba61c8a3000-2ba61c8a4000 r--s 00009000 00:1a 431695757                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hive-cli-1.2.1.spark2.jar
+2ba61c8a4000-2ba61c8a5000 r--s 00009000 00:1a 431695758                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-annotations-2.6.5.jar
+2ba61c8a5000-2ba61c8be000 r--s 00113000 00:1a 431695759                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-hive_2.11-2.2.0.jar
+2ba61c8be000-2ba61c8d6000 r--s 00115000 00:1a 431695760                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/xercesImpl-2.9.1.jar
+2ba61c8d6000-2ba61c8d8000 r--s 00003000 00:1a 431695761                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/base64-2.3.8.jar
+2ba61c8d8000-2ba61c8dc000 r--s 00035000 00:1a 431695762                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-core-asl-1.9.13.jar
+2ba61c8dc000-2ba61c975000 r--s 0074b000 00:1a 431695763                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-catalyst_2.11-2.2.0.jar
+2ba61c975000-2ba61c990000 r--s 001d8000 00:1a 431695764                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jets3t-0.9.3.jar
+2ba61c990000-2ba61c994000 r--s 0001a000 00:1a 431695765                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hk2-utils-2.4.0-b34.jar
+2ba61c994000-2ba61c995000 r--s 0000c000 00:1a 431695766                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-yarn-server-web-proxy-2.6.5.jar
+2ba61c995000-2ba61c997000 r--s 0000f000 00:1a 431695767                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-launcher_2.11-2.2.0.jar
+2ba61c997000-2ba61c998000 r--s 00006000 00:1a 431695768                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-client-2.6.5.jar
+2ba61c998000-2ba61c99a000 r--s 00003000 00:1a 431695769                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-container-servlet-2.22.2.jar
+2ba61c99a000-2ba61c9a1000 r--s 0003f000 00:1a 431695770                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-codec-1.10.jar
+2ba61c9a1000-2ba61c9a2000 r--s 00001000 00:1a 431695771                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javax.inject-2.4.0-b34.jar
+2ba61c9a2000-2ba61c9a8000 r--s 00049000 00:1a 431695772                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-yarn-server-common-2.6.5.jar
+2ba61c9a8000-2ba61c9b2000 r--s 000a5000 00:1a 431695773                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javassist-3.18.1-GA.jar
+2ba61c9b2000-2ba61ca5b000 r--s 00a4f000 00:1a 431695774                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hive-exec-1.2.1.spark2.jar
+2ba61ca5b000-2ba61ca61000 r--s 00038000 00:1a 431695775                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-hadoop-1.8.2.jar
+2ba61ca61000-2ba61cacc000 r--s 0093d000 00:1a 431695776                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spire_2.11-0.13.0.jar
+2ba61cacc000-2ba61cad4000 r--s 00066000 00:1a 431695777                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/apache-log4j-extras-1.2.17.jar
+2ba61cad4000-2ba61cadd000 r--s 0006f000 00:1a 431695778                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/log4j-1.2.17.jar
+2ba61cadd000-2ba61cae2000 r--s 0002a000 00:1a 431695779                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-beanutils-1.7.0.jar
+2ba61cae2000-2ba61cae4000 r--s 00100000 00:1a 431695780                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/snappy-java-1.1.2.6.jar
+2ba61cae4000-2ba61caec000 r--s 0007b000 00:1a 431695781                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/protobuf-java-2.5.0.jar
+2ba61caec000-2ba61caed000 r--s 00006000 00:1a 431695782                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-xc-1.9.13.jar
+2ba61caed000-2ba61caf4000 r--s 00046000 00:1a 431695784                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/libfb303-0.9.3.jar
+2ba61caf4000-2ba61cb04000 r--s 0009a000 00:1a 431695783                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-yarn_2.11-2.2.0.jar
+2ba61cb04000-2ba61cb05000 r--s 00003000 00:1a 431695785                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jta-1.1.jar
+2ba61cb05000-2ba61cb29000 r--s 001cd000 00:1a 431695786                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-math3-3.4.1.jar
+2ba61cb29000-2ba61cb2e000 r--s 00032000 00:1a 431695787                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/chill_2.11-0.8.0.jar
+2ba61cb2e000-2ba61cb46000 r--s 001b6000 00:1a 431695788                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/datanucleus-core-3.2.10.jar
+2ba61cb46000-2ba61cb7a000 r--s 00277000 00:1a 431695789                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-hadoop-bundle-1.6.0.jar
+2ba61cb7a000-2ba61cb7b000 r--s 00009000 00:1a 431695790                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/slf4j-api-1.7.16.jar
+2ba61cb7b000-2ba61cb7d000 r--s 00027000 00:1a 431695791                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/core-1.1.2.jar
+2ba61cb7d000-2ba61cb7e000 r--s 00000000 00:1a 431695792                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javax.inject-1.jar
+2ba61cb7e000-2ba61cb80000 r--s 00003000 00:1a 431695793                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jcl-over-slf4j-1.7.16.jar
+2ba61cb80000-2ba61cb82000 r--s 00000000 00:1a 431695794                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jul-to-slf4j-1.7.16.jar
+2ba61cb82000-2ba61cb85000 r--s 0001a000 00:1a 431695795                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/py4j-0.10.4.jar
+2ba61cb85000-2ba61cbc5000 r--s 00277000 00:1a 431695796                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/bcprov-jdk15on-1.51.jar
+2ba61cbc5000-2ba61cbc7000 r--s 0000f000 00:1a 431695797                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/curator-client-2.6.0.jar
+2ba61cbc7000-2ba61cbd9000 r--s 00112000 00:1a 431695798                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/arpack_combined_all-0.1.jar
+2ba61cbd9000-2ba61cbda000 r--s 00002000 00:1a 431695799                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/slf4j-log4j12-1.7.16.jar
+2ba61cbda000-2ba61cbf0000 r--s 001a4000 00:1a 431695800                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/datanucleus-rdbms-3.2.9.jar
+2ba61cbf0000-2ba61ccc8000 r--s 00d92000 00:1a 431695801                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/breeze_2.11-0.13.1.jar
+2ba61ccc8000-2ba61ccf6000 r--s 00216000 00:1a 431695802                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-network-common_2.11-2.2.0.jar
+2ba61ccf6000-2ba61ccf7000 r--s 00003000 00:1a 431695803                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/metrics-json-3.1.2.jar
+2ba61ccf7000-2ba61ccff000 r--s 00058000 00:1a 431695804                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-format-2.3.1.jar
+2ba61ccff000-2ba61cd01000 r--s 00012000 00:1a 431695805                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/api-util-1.0.0-M20.jar
+2ba61cd01000-2ba61cd05000 r--s 00018000 00:1a 431695806                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/metrics-core-3.1.2.jar
+2ba61cd05000-2ba61cd0a000 r--s 00027000 00:1a 431695807                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hk2-api-2.4.0-b34.jar
+2ba61cd0a000-2ba61cd0f000 r--s 00041000 00:1a 431695808                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-lang-2.6.jar
+2ba61cd0f000-2ba61cd11000 r--s 00012000 00:1a 431695809                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/compress-lzf-1.0.3.jar
+2ba61cd11000-2ba61cd33000 r--s 00335000 00:1a 431695810                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/mesos-1.0.0-shaded-protobuf.jar
+2ba61cd33000-2ba61cd69000 r--s 002fe000 00:1a 431695811                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-common-2.6.5.jar
+2ba61cd69000-2ba61cd6c000 r--s 00006000 00:1a 431695812                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jsr305-1.3.9.jar
+2ba61cd6c000-2ba61cd80000 r--s 000ec000 00:1a 431695813                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-jackson-1.8.2.jar
+2ba61cd80000-2ba61cd82000 r--s 00009000 00:1a 431695814                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/objenesis-2.1.jar
+2ba61cd82000-2ba61cdb2000 r--s 001e5000 00:1a 431695815                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-streaming_2.11-2.2.0.jar
+2ba61cdb2000-2ba61cdb8000 r--s 00063000 00:1a 431695816                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jodd-core-3.5.2.jar
+2ba61cdb8000-2ba61cdbc000 r--s 00014000 00:1a 431695820                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/xz-1.0.jar
+2ba61cdbc000-2ba61cdd4000 r--s 000d6000 00:1a 431695818                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-guava-2.22.2.jar
+2ba61cdd4000-2ba61cdd7000 r--s 00015000 00:1a 431695817                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/pyrolite-4.13.jar
+2ba61cdd7000-2ba61cdd9000 r--s 00014000 00:1a 431695821                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spire-macros_2.11-0.13.0.jar
+2ba61cdd9000-2ba61cde3000 r--s 00086000 00:1a 431695822                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/json4s-core_2.11-3.2.11.jar
+2ba61cde3000-2ba61cde5000 r--s 00020000 00:1a 431695819                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hive-beeline-1.2.1.spark2.jar
+2ba61cde5000-2ba61cdf7000 r--s 000b3000 00:1a 431695823                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scalap-2.11.8.jar
+2ba61cdf7000-2ba61cdfa000 r--s 000fd000 00:1a 431695824                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/leveldbjni-all-1.8.jar
+2ba61cdfa000-2ba61cdfe000 r--s 0003c000 00:1a 431695825                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-core-2.6.5.jar
+2ba61cdfe000-2ba61ce01000 r--s 00009000 00:1a 431695826                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-annotations-2.6.5.jar
+2ba61ce01000-2ba61ce04000 r--s 00021000 00:1a 431695827                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/xbean-asm5-shaded-4.4.jar
+2ba61ce04000-2ba61ce08000 r--s 00036000 00:1a 431695828                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/ST4-4.0.4.jar
+2ba61ce08000-2ba61ce15000 r--s 00083000 00:1a 431695829                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-collections-3.2.2.jar
+2ba61ce15000-2ba61ce17000 r--s 00009000 00:1a 431695830                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-common-1.8.2.jar
+2ba61ce17000-2ba61ce28000 r--s 0010d000 00:1a 431695831                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-databind-2.6.5.jar
+2ba61ce28000-2ba61ce30000 r--s 00059000 00:1a 431695832                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javolution-5.5.1.jar
+2ba61ce30000-2ba61ce36000 r--s 00034000 00:1a 431695833                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/libthrift-0.9.3.jar
+2ba61ce36000-2ba61ce39000 r--s 00014000 00:1a 431695834                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-auth-2.6.5.jar
+2ba61ce39000-2ba61ce3b000 r--s 0000e000 00:1a 431695835                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/oro-2.0.8.jar
+2ba61ce3b000-2ba61ce3f000 r--s 0002a000 00:1a 431695836                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-io-2.4.jar
+2ba61ce3f000-2ba61ce46000 r--s 0007d000 00:1a 431695837                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jetty-6.1.26.jar
+2ba61ce46000-2ba61ce4a000 r--s 00028000 00:1a 431695838                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jetty-util-6.1.26.jar
+2ba61ce4a000-2ba61ce51000 r--s 00039000 00:1a 431695839                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/calcite-avatica-1.2.0-incubating.jar
+2ba61ce51000-2ba61ce56000 r--s 00068000 00:1a 431695840                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/antlr-2.7.7.jar
+2ba61ce56000-2ba61ce59000 r--s 00025000 00:1a 431695841                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-dbcp-1.4.jar
+2ba61ce59000-2ba61cebc000 r--s 004de000 00:1a 431695842                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hive-metastore-1.2.1.spark2.jar
+2ba61cebc000-2ba61cec1000 r--s 0002a000 00:1a 431695843                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/gson-2.2.4.jar
+2ba61cec1000-2ba61cec6000 r--s 00028000 00:1a 431695844                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/avro-mapred-1.7.7-hadoop2.jar
+2ba61cec6000-2ba61cec9000 r--s 0002f000 00:1a 431695845                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/RoaringBitmap-0.5.11.jar
+2ba61cec9000-2ba61ced3000 r--s 00078000 00:1a 431695846                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-app-2.6.5.jar
+2ba61ced3000-2ba61ced4000 r--s 00001000 00:1a 431695847                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/minlog-1.3.0.jar
+2ba61ced4000-2ba61ced6000 r--s 00004000 00:1a 431695848                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/metrics-graphite-3.1.2.jar
+2ba61ced6000-2ba61cedd000 r--s 0005d000 00:1a 431695849                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/mx4j-3.0.2.jar
+2ba61cedd000-2ba61cf29000 r--s 00411000 00:1a 431695850                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scala-reflect-2.11.8.jar
+2ba61cf29000-2ba61cf2a000 r--s 00004000 00:1a 431695851                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/eigenbase-properties-1.1.5.jar
+2ba61cf2a000-2ba61cf2c000 r--s 00002000 00:1a 431695852                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/aopalliance-repackaged-2.4.0-b34.jar
+2ba61cf2c000-2ba61cf30000 r--s 00019000 00:1a 431695853                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javax.ws.rs-api-2.0.1.jar
+2ba61cf30000-2ba61cf3d000 r--s 00071000 00:1a 431695854                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-module-scala_2.11-2.6.5.jar
+2ba61cf3d000-2ba61cf3f000 r--s 00006000 00:1a 431695855                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/htrace-core-3.0.4.jar
+2ba61cf3f000-2ba61cf41000 r--s 0000e000 00:1a 431695856                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-repl_2.11-2.2.0.jar
+2ba61cf41000-2ba61cfba000 r--s 005bb000 00:1a 431695857                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-mllib_2.11-2.2.0.jar
+2ba61cfba000-2ba61cfbd000 r--s 00023000 00:1a 431695858                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-yarn-client-2.6.5.jar
+2ba61cfbd000-2ba61cfbf000 r--s 0000b000 00:1a 431695859                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/chill-java-0.8.0.jar
+2ba61cfbf000-2ba61cfc1000 r--s 00008000 00:1a 431695860                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/metrics-jvm-3.1.2.jar
+2ba61cfc1000-2ba61cfc2000 r--s 00002000 00:1a 431695861                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jpam-1.1.jar
+2ba61cfc2000-2ba61cfd8000 r--s 000d3000 00:1a 431695862                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-server-2.22.2.jar
+2ba61cfd8000-2ba61cfdb000 r--s 00015000 00:1a 431695863                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javax.servlet-api-3.1.0.jar
+2ba61cfdb000-2ba61cfdd000 r--s 00005000 00:1a 431695864                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/javax.annotation-api-1.2.jar
+2ba61cfdd000-2ba61cfe8000 r--s 000b0000 00:1a 431695865                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jtransforms-2.4.0.jar
+2ba61cfe8000-2ba61cfec000 r--s 00031000 00:1a 431695866                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jline-2.12.1.jar
+2ba61cfec000-2ba61d005000 r--s 0012c000 00:1a 431695867                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/netty-3.9.9.Final.jar
+2ba61d005000-2ba61d013000 r--s 000b1000 00:1a 431695868                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-mapper-asl-1.9.13.jar
+2ba61d013000-2ba61d017000 r--s 00029000 00:1a 431695869                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hk2-locator-2.4.0-b34.jar
+2ba61d017000-2ba61d01b000 r--s 0002f000 00:1a 431695870                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-beanutils-core-1.8.0.jar
+2ba61d01b000-2ba61d026000 r--s 00062000 00:1a 431695871                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/calcite-linq4j-1.2.0-incubating.jar
+2ba61d026000-2ba61d02c000 r--s 00044000 00:1a 431695872                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/antlr4-runtime-4.5.3.jar
+2ba61d02c000-2ba61d03d000 r--s 00089000 00:1a 431695874                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/joda-time-2.9.3.jar
+2ba61d03d000-2ba61d149000 r--s 00dba000 00:1a 431695878                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scala-compiler-2.11.8.jar
+2ba61d149000-2ba61d14a000 r--s 00008000 00:1a 431695877                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-compiler-3.0.0.jar
+2ba61d14a000-2ba61d158000 r--s 0007c000 00:1a 431695876                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-mesos_2.11-2.2.0.jar
+2ba61d158000-2ba61d15a000 r--s 00000000 00:1a 431695873                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/aopalliance-1.0.jar
+2ba61d15a000-2ba61d15d000 r--s 00012000 00:1a 431695875                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/json4s-ast_2.11-3.2.11.jar
+2ba61d15d000-2ba61d161000 r--s 00020000 00:1a 431695879                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-digester-1.8.jar
+2ba61d161000-2ba61d165000 r--s 0002c000 00:1a 431695882                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/avro-ipc-1.7.7.jar
+2ba61d165000-2ba61d167000 r--s 00005000 00:1a 431695880                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/stax-api-1.0.1.jar
+2ba61d167000-2ba61d171000 r--s 000aa000 00:1a 431695884                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/janino-3.0.0.jar
+2ba61d171000-2ba61d173000 r--s 00017000 00:1a 431695881                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hive-jdbc-1.2.1.spark2.jar
+2ba61d173000-2ba61d1fd000 r--s 00641000 00:1a 431695883                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-sql_2.11-2.2.0.jar
+2ba61d1fd000-2ba61d2de000 r--s 00b03000 00:1a 431695885                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-core_2.11-2.2.0.jar
+2ba61d2de000-2ba61d2e0000 r--s 0000f000 00:1a 431695886                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-shuffle-2.6.5.jar
+2ba61d2e0000-2ba61d2e1000 r--s 00008000 00:1a 431695887                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/machinist_2.11-0.6.1.jar
+2ba61d2e1000-2ba61d2e5000 r--s 0002a000 00:1a 431695888                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/breeze-macros_2.11-0.13.1.jar
+2ba61d2e5000-2ba61d2f2000 r--s 000a7000 00:1a 431695889                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/httpclient-4.5.2.jar
+2ba61d2f2000-2ba61d2f5000 r--s 00015000 00:1a 431695890                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-pool-1.5.4.jar
+2ba61d2f5000-2ba61d2f7000 r--s 00038000 00:1a 431695891                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/lz4-1.3.0.jar
+2ba61d2f7000-2ba61d2f8000 r--s 00000000 00:1a 431695892                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/macro-compat_2.11-1.1.1.jar
+2ba61d2f8000-2ba61d301000 r--s 00062000 00:1a 431695893                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/avro-1.7.7.jar
+2ba61d301000-2ba61d305000 r--s 00025000 00:1a 431695894                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-client-2.22.2.jar
+2ba61d305000-2ba61d31f000 r--s 001b5000 00:1a 431695895                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-yarn-api-2.6.5.jar
+2ba61d31f000-2ba61d320000 r--s 00001000 00:1a 431695896                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/pmml-schema-1.2.15.jar
+2ba61d320000-2ba61d324000 r--s 0000c000 00:1a 431695900                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/validation-api-1.1.0.Final.jar
+2ba61d324000-2ba61d331000 r--s 000a0000 00:1a 431695901                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-graphx_2.11-2.2.0.jar
+2ba61d331000-2ba61d348000 r--s 00177000 00:1a 431695899                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-yarn-common-2.6.5.jar
+2ba61d348000-2ba61d34a000 r--s 00004000 00:1a 431695898                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/stax-api-1.0-2.jar
+2ba61d34a000-2ba61d34b000 r--s 00003000 00:1a 431695902                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/xmlenc-0.52.jar
+2ba61d34b000-2ba61d34d000 r--s 00009000 00:1a 431695897                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-module-paranamer-2.6.5.jar
+2ba61d34d000-2ba61d34f000 r--s 0001f000 00:1a 431695903                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-crypto-1.0.0.jar
+2ba61d34f000-2ba61d355000 r--s 00040000 00:1a 431695904                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-encoding-1.8.2.jar
+2ba61d355000-2ba61d384000 r--s 002e5000 00:1a 431695906                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/derby-10.12.1.1.jar
+2ba61d384000-2ba61d385000 r--s 0000b000 00:1a 431695905                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/snappy-0.2.jar
+2ba61d385000-2ba61d387000 r--s 00009000 00:1a 431695908                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-cli-1.2.jar
+2ba61d387000-2ba61d3b0000 r--s 001ee000 00:1a 431695907                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/guava-14.0.1.jar
+2ba61d3b0000-2ba61d3b2000 r--s 0000e000 00:1a 431695909                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/guice-servlet-3.0.jar
+2ba61d3b2000-2ba61d3b4000 r--s 00010000 00:1a 431695910                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-media-jaxb-2.22.2.jar
+2ba61d3b4000-2ba61d3b5000 r--s 00002000 00:1a 431695911                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/java-xmlbuilder-1.0.jar
+2ba61d3b5000-2ba61d3b7000 r--s 0000f000 00:1a 431695912                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/activation-1.1.1.jar
+2ba61d3b7000-2ba61d3bc000 r--s 00036000 00:1a 431695913                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-compress-1.4.1.jar
+2ba61d3bc000-2ba61d3bf000 r--s 00028000 00:1a 431695914                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/stream-2.7.0.jar
+2ba61d3bf000-2ba61d3c4000 r--s 0004e000 00:1a 431695915                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/datanucleus-api-jdo-3.2.6.jar
+2ba61d3c4000-2ba61d3c5000 r--s 00004000 00:1a 431695916                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/osgi-resource-locator-1.0.1.jar
+2ba61d3c5000-2ba61d3c7000 r--s 0000e000 00:1a 431695917                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-logging-1.1.3.jar
+2ba61d3c7000-2ba61d40d000 r--s 00317000 00:1a 431695918                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/shapeless_2.11-2.3.2.jar
+2ba61d40d000-2ba61d410000 r--s 0000e000 00:1a 431695919                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-container-servlet-core-2.22.2.jar
+2ba61d410000-2ba61d426000 r--s 00124000 00:1a 431695924                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/ivy-2.4.0.jar
+2ba61d426000-2ba61d427000 r--s 00009000 00:1a 431695923                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/json4s-jackson_2.11-3.2.11.jar
+2ba61d427000-2ba61d429000 r--s 00003000 00:1a 431695926                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/api-asn1-api-1.0.0-M20.jar
+2ba61d429000-2ba61d43b000 r--s 00097000 00:1a 431695922                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/apacheds-kerberos-codec-2.0.0-M15.jar
+2ba61d43b000-2ba61d45d000 r--s 00197000 00:1a 431695920                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-hive-thriftserver_2.11-2.2.0.jar
+2ba61d45d000-2ba61d460000 r--s 00017000 00:1a 431695925                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jaxb-api-2.2.2.jar
+2ba61d460000-2ba61d467000 r--s 00049000 00:1a 431695921                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/univocity-parsers-2.2.1.jar
+2ba61d467000-2ba61d471000 r--s 00095000 00:1a 431695927                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scala-xml_2.11-1.0.2.jar
+2ba61d471000-2ba61d477000 r--s 00045000 00:1a 431695931                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-httpclient-3.1.jar
+2ba61d477000-2ba61d478000 r--s 0000e000 00:1a 431695934                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-jobclient-2.6.5.jar
+2ba61d478000-2ba61d47f000 r--s 00036000 00:1a 431695933                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/curator-recipes-2.6.0.jar
+2ba61d47f000-2ba61d4e6000 r--s 0072d000 00:1a 431695932                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-hdfs-2.6.5.jar
+2ba61d4e6000-2ba61d4ec000 r--s 00028000 00:1a 431695929                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/curator-framework-2.6.0.jar
+2ba61d4ec000-2ba61d4f0000 r--s 00030000 00:1a 431695928                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-net-2.2.jar
+2ba61d4f0000-2ba61d516000 r--s 00212000 00:1a 431695930                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/netty-all-4.0.43.Final.jar
+2ba61d516000-2ba61d518000 r--s 00007000 00:1a 431695935                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/paranamer-2.6.jar
+2ba61d518000-2ba61d571000 r--s 00522000 00:1a 431695936                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scala-library-2.11.8.jar
+2ba61d571000-2ba61d578000 r--s 00049000 00:1a 431695937                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/httpcore-4.4.4.jar
+2ba61d578000-2ba61d579000 r--s 00004000 00:1a 431695938                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/opencsv-2.3.jar
+2ba61d579000-2ba61d57a000 r--s 0000a000 00:1a 431695939                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/apacheds-i18n-2.0.0-M15.jar
+2ba61d57a000-2ba61d57d000 r--s 00022000 00:1a 431695940                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/stringtemplate-3.2.1.jar
+2ba61d57d000-2ba61d586000 r--s 00097000 00:1a 431695942                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/pmml-model-1.2.15.jar
+2ba61d586000-2ba61d587000 r--s 00003000 00:1a 431695941                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-tags_2.11-2.2.0.jar
+2ba61d587000-2ba61d58f000 r--s 0006e000 00:1a 431695943                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-lang3-3.5.jar
+2ba61d58f000-2ba61d5a5000 r-xp 00000000 00:1a 437191576                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libnet.so
+2ba61d5a5000-2ba61d7a5000 ---p 00016000 00:1a 437191576                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libnet.so
+2ba61d7a5000-2ba61d7a6000 rw-p 00016000 00:1a 437191576                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libnet.so
+2ba61d7a6000-2ba61d7a8000 r--s 0000a000 00:1a 431695944                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-unsafe_2.11-2.2.0.jar
+2ba61d7a8000-2ba61d7ab000 r--s 0000d000 00:1a 431695945                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-network-shuffle_2.11-2.2.0.jar
+2ba61d7ab000-2ba61d9ab000 rw-p 00000000 00:00 0 
+2ba61d9ab000-2ba61d9ae000 ---p 00000000 00:00 0 
+2ba61d9ae000-2ba61daac000 rw-p 00000000 00:00 0 
+2ba61daac000-2ba61daaf000 ---p 00000000 00:00 0 
+2ba61daaf000-2ba61dbad000 rw-p 00000000 00:00 0 
+2ba61dbad000-2ba61dbb0000 ---p 00000000 00:00 0 
+2ba61dbb0000-2ba61deae000 rw-p 00000000 00:00 0 
+2ba61deae000-2ba61deb7000 r-xp 00000000 00:1a 432507835                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libmanagement.so
+2ba61deb7000-2ba61e0b6000 ---p 00009000 00:1a 432507835                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libmanagement.so
+2ba61e0b6000-2ba61e0b7000 rw-p 00008000 00:1a 432507835                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libmanagement.so
+2ba61e0b7000-2ba61e0ba000 r--s 0001a000 00:1a 437191423                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/jce.jar
+2ba61e0ba000-2ba61e4ba000 rw-p 00000000 00:00 0 
+2ba61e4ba000-2ba61e4bd000 ---p 00000000 00:00 0 
+2ba61e4bd000-2ba61e4f3000 rw-p 00000000 00:00 0 
+2ba61e4f3000-2ba61e4f6000 ---p 00000000 00:00 0 
+2ba61e4f6000-2ba61e5f4000 rw-p 00000000 00:00 0 
+2ba61e5f4000-2ba61e5f5000 r-xp 00000000 00:1a 432507820                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libjaas_unix.so
+2ba61e5f5000-2ba61e7f4000 ---p 00001000 00:1a 432507820                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libjaas_unix.so
+2ba61e7f4000-2ba61e7f5000 rw-p 00000000 00:1a 432507820                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libjaas_unix.so
+2ba61e7f5000-2ba61e7f8000 ---p 00000000 00:00 0 
+2ba61e7f8000-2ba61e8f6000 rw-p 00000000 00:00 0 
+2ba61e8f6000-2ba61e8f9000 ---p 00000000 00:00 0 
+2ba61e8f9000-2ba61e9f7000 rw-p 00000000 00:00 0 
+2ba61e9f7000-2ba61e9fa000 ---p 00000000 00:00 0 
+2ba61e9fa000-2ba61eaf8000 rw-p 00000000 00:00 0 
+2ba61eaf8000-2ba61eafb000 ---p 00000000 00:00 0 
+2ba61eafb000-2ba61ebf9000 rw-p 00000000 00:00 0 
+2ba61ebf9000-2ba61ebfc000 ---p 00000000 00:00 0 
+2ba61ebfc000-2ba61ecfa000 rw-p 00000000 00:00 0 
+2ba61ecfa000-2ba61ecfd000 ---p 00000000 00:00 0 
+2ba61ecfd000-2ba61edfb000 rw-p 00000000 00:00 0 
+2ba61edfb000-2ba61edfe000 ---p 00000000 00:00 0 
+2ba61edfe000-2ba61eefc000 rw-p 00000000 00:00 0 
+2ba61eefc000-2ba61eeff000 ---p 00000000 00:00 0 
+2ba61eeff000-2ba61effd000 rw-p 00000000 00:00 0 
+2ba61effd000-2ba61f000000 ---p 00000000 00:00 0 
+2ba61f000000-2ba61f0fe000 rw-p 00000000 00:00 0 
+2ba61f0fe000-2ba61f101000 ---p 00000000 00:00 0 
+2ba61f101000-2ba61f1ff000 rw-p 00000000 00:00 0 
+2ba61f1ff000-2ba61f202000 ---p 00000000 00:00 0 
+2ba61f202000-2ba61f300000 rw-p 00000000 00:00 0 
+2ba61f300000-2ba61f303000 ---p 00000000 00:00 0 
+2ba61f303000-2ba61f401000 rw-p 00000000 00:00 0 
+2ba61f401000-2ba61f404000 ---p 00000000 00:00 0 
+2ba61f404000-2ba61f502000 rw-p 00000000 00:00 0 
+2ba61f502000-2ba61f505000 ---p 00000000 00:00 0 
+2ba61f505000-2ba61f603000 rw-p 00000000 00:00 0 
+2ba61f603000-2ba61f606000 ---p 00000000 00:00 0 
+2ba61f606000-2ba61f704000 rw-p 00000000 00:00 0 
+2ba61f704000-2ba61f707000 ---p 00000000 00:00 0 
+2ba61f707000-2ba61f805000 rw-p 00000000 00:00 0 
+2ba61f805000-2ba61f808000 ---p 00000000 00:00 0 
+2ba61f808000-2ba61f906000 rw-p 00000000 00:00 0 
+2ba61f906000-2ba61f909000 ---p 00000000 00:00 0 
+2ba61f909000-2ba61fa07000 rw-p 00000000 00:00 0 
+2ba61fa07000-2ba61fa0a000 ---p 00000000 00:00 0 
+2ba61fa0a000-2ba61fd08000 rw-p 00000000 00:00 0 
+2ba61fd08000-2ba61fd1b000 r--s 00345000 00:1a 437191312                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/resources.jar
+2ba61fd1b000-2ba61ff1b000 rw-p 00000000 00:00 0 
+2ba61ff1b000-2ba61ff20000 r--s 0009d000 00:1a 437191518                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/jsse.jar
+2ba620000000-2ba620021000 rw-p 00000000 00:00 0 
+2ba620021000-2ba624000000 ---p 00000000 00:00 0 
+2ba624000000-2ba624021000 rw-p 00000000 00:00 0 
+2ba624021000-2ba628000000 ---p 00000000 00:00 0 
+2ba628000000-2ba628021000 rw-p 00000000 00:00 0 
+2ba628021000-2ba62c000000 ---p 00000000 00:00 0 
+2ba62c000000-2ba62c021000 rw-p 00000000 00:00 0 
+2ba62c021000-2ba630000000 ---p 00000000 00:00 0 
+2ba630000000-2ba630021000 rw-p 00000000 00:00 0 
+2ba630021000-2ba634000000 ---p 00000000 00:00 0 
+2ba634000000-2ba634021000 rw-p 00000000 00:00 0 
+2ba634021000-2ba638000000 ---p 00000000 00:00 0 
+2ba638000000-2ba638021000 rw-p 00000000 00:00 0 
+2ba638021000-2ba63c000000 ---p 00000000 00:00 0 
+2ba63c000000-2ba63c021000 rw-p 00000000 00:00 0 
+2ba63c021000-2ba640000000 ---p 00000000 00:00 0 
+2ba640000000-2ba640021000 rw-p 00000000 00:00 0 
+2ba640021000-2ba644000000 ---p 00000000 00:00 0 
+2ba644000000-2ba644021000 rw-p 00000000 00:00 0 
+2ba644021000-2ba648000000 ---p 00000000 00:00 0 
+2ba648000000-2ba648021000 rw-p 00000000 00:00 0 
+2ba648021000-2ba64c000000 ---p 00000000 00:00 0 
+2ba64c000000-2ba64c021000 rw-p 00000000 00:00 0 
+2ba64c021000-2ba650000000 ---p 00000000 00:00 0 
+2ba650000000-2ba650021000 rw-p 00000000 00:00 0 
+2ba650021000-2ba654000000 ---p 00000000 00:00 0 
+2ba654000000-2ba654021000 rw-p 00000000 00:00 0 
+2ba654021000-2ba658000000 ---p 00000000 00:00 0 
+2ba658000000-2ba658021000 rw-p 00000000 00:00 0 
+2ba658021000-2ba65c000000 ---p 00000000 00:00 0 
+2ba65c000000-2ba65ea14000 rw-p 00000000 00:00 0 
+2ba65ea14000-2ba65eb0d000 rw-p 00000000 00:00 0 
+2ba65eb0d000-2ba65ece7000 r--s 03d6b000 00:1a 432507844                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/rt.jar
+2ba65ece7000-2ba661f76000 rw-p 00000000 00:00 0 
+2ba661f76000-2ba661f77000 ---p 00000000 00:00 0 
+2ba661f77000-2ba662077000 rw-p 00000000 00:00 0 
+2ba662077000-2ba66207a000 ---p 00000000 00:00 0 
+2ba66207a000-2ba662178000 rw-p 00000000 00:00 0 
+2ba662178000-2ba66217b000 ---p 00000000 00:00 0 
+2ba66217b000-2ba662279000 rw-p 00000000 00:00 0 
+2ba662279000-2ba66227c000 ---p 00000000 00:00 0 
+2ba66227c000-2ba66237a000 rw-p 00000000 00:00 0 
+2ba66237a000-2ba66237d000 ---p 00000000 00:00 0 
+2ba66237d000-2ba66247b000 rw-p 00000000 00:00 0 
+2ba66247b000-2ba66247e000 ---p 00000000 00:00 0 
+2ba66247e000-2ba66257c000 rw-p 00000000 00:00 0 
+2ba66257c000-2ba66257f000 ---p 00000000 00:00 0 
+2ba66257f000-2ba66267d000 rw-p 00000000 00:00 0 
+2ba66267d000-2ba662680000 ---p 00000000 00:00 0 
+2ba662680000-2ba66277e000 rw-p 00000000 00:00 0 
+2ba66277e000-2ba662781000 ---p 00000000 00:00 0 
+2ba662781000-2ba66287f000 rw-p 00000000 00:00 0 
+2ba66287f000-2ba662882000 ---p 00000000 00:00 0 
+2ba662882000-2ba662980000 rw-p 00000000 00:00 0 
+2ba662980000-2ba662983000 ---p 00000000 00:00 0 
+2ba662983000-2ba662a81000 rw-p 00000000 00:00 0 
+2ba662a81000-2ba662a84000 ---p 00000000 00:00 0 
+2ba662a84000-2ba662b82000 rw-p 00000000 00:00 0 
+2ba662b82000-2ba662b85000 ---p 00000000 00:00 0 
+2ba662b85000-2ba662c83000 rw-p 00000000 00:00 0 
+2ba662c83000-2ba662c86000 ---p 00000000 00:00 0 
+2ba662c86000-2ba662d84000 rw-p 00000000 00:00 0 
+2ba662d84000-2ba662d87000 ---p 00000000 00:00 0 
+2ba662d87000-2ba662e85000 rw-p 00000000 00:00 0 
+2ba662e85000-2ba662e88000 ---p 00000000 00:00 0 
+2ba662e88000-2ba662f86000 rw-p 00000000 00:00 0 
+2ba662f86000-2ba662f97000 r-xp 00000000 00:1a 411253528                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libnio.so
+2ba662f97000-2ba663196000 ---p 00011000 00:1a 411253528                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libnio.so
+2ba663196000-2ba663197000 rw-p 00010000 00:1a 411253528                  /general/software/x86_64/easybuild/software/JDK/1.8.0_181/jre/lib/amd64/libnio.so
+2ba663197000-2ba66319a000 ---p 00000000 00:00 0 
+2ba66319a000-2ba663298000 rw-p 00000000 00:00 0 
+2ba663298000-2ba66329b000 ---p 00000000 00:00 0 
+2ba66329b000-2ba663399000 rw-p 00000000 00:00 0 
+2ba663399000-2ba66339c000 ---p 00000000 00:00 0 
+2ba66339c000-2ba66349a000 rw-p 00000000 00:00 0 
+2ba66349a000-2ba66349d000 ---p 00000000 00:00 0 
+2ba66349d000-2ba66359b000 rw-p 00000000 00:00 0 
+2ba66359b000-2ba66359e000 ---p 00000000 00:00 0 
+2ba66359e000-2ba66369c000 rw-p 00000000 00:00 0 
+2ba66369c000-2ba66369f000 ---p 00000000 00:00 0 
+2ba66369f000-2ba66379d000 rw-p 00000000 00:00 0 
+2ba66379d000-2ba6637a0000 ---p 00000000 00:00 0 
+2ba6637a0000-2ba66389e000 rw-p 00000000 00:00 0 
+2ba66389e000-2ba6638a1000 ---p 00000000 00:00 0 
+2ba6638a1000-2ba66399f000 rw-p 00000000 00:00 0 
+2ba66399f000-2ba6639a2000 ---p 00000000 00:00 0 
+2ba6639a2000-2ba663aa0000 rw-p 00000000 00:00 0 
+2ba663aa0000-2ba663aa3000 ---p 00000000 00:00 0 
+2ba663aa3000-2ba663da1000 rw-p 00000000 00:00 0 
+2ba663da1000-2ba663da4000 ---p 00000000 00:00 0 
+2ba663da4000-2ba663ea2000 rw-p 00000000 00:00 0 
+2ba663ea2000-2ba663ea5000 ---p 00000000 00:00 0 
+2ba663ea5000-2ba663fa3000 rw-p 00000000 00:00 0 
+2ba664000000-2ba6640ba000 rw-p 00000000 00:00 0 
+2ba6640ba000-2ba668000000 ---p 00000000 00:00 0 
+2ba668000000-2ba668021000 rw-p 00000000 00:00 0 
+2ba668021000-2ba66c000000 ---p 00000000 00:00 0 
+2ba66c000000-2ba66c021000 rw-p 00000000 00:00 0 
+2ba66c021000-2ba670000000 ---p 00000000 00:00 0 
+2ba670000000-2ba670021000 rw-p 00000000 00:00 0 
+2ba670021000-2ba674000000 ---p 00000000 00:00 0 
+2ba674000000-2ba6742b9000 rw-p 00000000 00:00 0 
+2ba6742b9000-2ba678000000 ---p 00000000 00:00 0 
+2ba678000000-2ba679b82000 rw-p 00000000 00:00 0 
+2ba679b82000-2ba67c000000 ---p 00000000 00:00 0 
+2ba67c000000-2ba67d4d1000 rw-p 00000000 00:00 0 
+2ba67d4d1000-2ba680000000 ---p 00000000 00:00 0 
+2ba680000000-2ba68027c000 rw-p 00000000 00:00 0 
+2ba68027c000-2ba684000000 ---p 00000000 00:00 0 
+2ba684000000-2ba684367000 rw-p 00000000 00:00 0 
+2ba684367000-2ba688000000 ---p 00000000 00:00 0 
+2ba688000000-2ba68835e000 rw-p 00000000 00:00 0 
+2ba68835e000-2ba68c000000 ---p 00000000 00:00 0 
+2ba68c000000-2ba68c2ac000 rw-p 00000000 00:00 0 
+2ba68c2ac000-2ba690000000 ---p 00000000 00:00 0 
+2ba690000000-2ba690237000 rw-p 00000000 00:00 0 
+2ba690237000-2ba694000000 ---p 00000000 00:00 0 
+2ba694000000-2ba6942db000 rw-p 00000000 00:00 0 
+2ba6942db000-2ba698000000 ---p 00000000 00:00 0 
+2ba698000000-2ba698429000 rw-p 00000000 00:00 0 
+2ba698429000-2ba69c000000 ---p 00000000 00:00 0 
+2ba69c000000-2ba69c283000 rw-p 00000000 00:00 0 
+2ba69c283000-2ba6a0000000 ---p 00000000 00:00 0 
+2ba6a0000000-2ba6a0262000 rw-p 00000000 00:00 0 
+2ba6a0262000-2ba6a4000000 ---p 00000000 00:00 0 
+2ba6a4000000-2ba6a4021000 rw-p 00000000 00:00 0 
+2ba6a4021000-2ba6a8000000 ---p 00000000 00:00 0 
+2ba6a8000000-2ba6a8021000 rw-p 00000000 00:00 0 
+2ba6a8021000-2ba6ac000000 ---p 00000000 00:00 0 
+2ba6ac000000-2ba6ac017000 r--s 000d3000 00:1a 431695738                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-column-1.8.2.jar
+2ba6ac017000-2ba6ac01e000 r--s 00051000 00:1a 431695739                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/kryo-shaded-3.0.3.jar
+2ba6ac01e000-2ba6ac01f000 r--s 00004000 00:1a 431695740                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-jaxrs-1.9.13.jar
+2ba6ac01f000-2ba6ac025000 r--s 00043000 00:1a 431695741                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-configuration-1.6.jar
+2ba6ac025000-2ba6ac030000 r--s 0005d000 00:1a 431695742                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scala-parser-combinators_2.11-1.0.4.jar
+2ba6ac030000-2ba6ac032000 r--s 00006000 00:1a 431695743                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-sketch_2.11-2.2.0.jar
+2ba6ac032000-2ba6ac04b000 r--s 0015f000 00:1a 431695744                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-core-2.6.5.jar
+2ba6ac04b000-2ba6ac053000 r--s 00078000 00:1a 431695745                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/mail-1.4.7.jar
+2ba6ac053000-2ba6ac057000 r--s 00029000 00:1a 431695746                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-mllib-local_2.11-2.2.0.jar
+2ba6ac057000-2ba6ac05a000 r--s 00014000 00:1a 431695747                  /general/software/x86_64/easybuild/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/super-csv-2.2.0.jar
+2ba6ac05a000-2ba6ac05d000 ---p 00000000 00:00 0 
+2ba6ac05d000-2ba6ac15b000 rw-p 00000000 00:00 0 
+2ba6ac15b000-2ba6ac15e000 ---p 00000000 00:00 0 
+2ba6ac15e000-2ba6ac25c000 rw-p 00000000 00:00 0 
+2ba6ac25c000-2ba6ac25f000 ---p 00000000 00:00 0 
+2ba6ac25f000-2ba6ac35d000 rw-p 00000000 00:00 0 
+2ba6ac35d000-2ba6ac360000 ---p 00000000 00:00 0 
+2ba6ac360000-2ba6ac45e000 rw-p 00000000 00:00 0 
+2ba6ac45e000-2ba6ac461000 ---p 00000000 00:00 0 
+2ba6ac461000-2ba6ac55f000 rw-p 00000000 00:00 0 
+2ba6ac55f000-2ba6ac562000 ---p 00000000 00:00 0 
+2ba6ac562000-2ba6ac660000 rw-p 00000000 00:00 0 
+2ba6ac660000-2ba6ac663000 ---p 00000000 00:00 0 
+2ba6ac663000-2ba6ac961000 rw-p 00000000 00:00 0 
+2ba6ac961000-2ba6ac964000 ---p 00000000 00:00 0 
+2ba6ac964000-2ba6aca62000 rw-p 00000000 00:00 0 
+2ba6aca62000-2ba6aca65000 ---p 00000000 00:00 0 
+2ba6aca65000-2ba6acb63000 rw-p 00000000 00:00 0 
+2ba6acb63000-2ba6acb66000 ---p 00000000 00:00 0 
+2ba6acb66000-2ba6acc64000 rw-p 00000000 00:00 0 
+2ba6acc64000-2ba6acc67000 ---p 00000000 00:00 0 
+2ba6acc67000-2ba6acd65000 rw-p 00000000 00:00 0 
+2ba6acd65000-2ba6acd68000 ---p 00000000 00:00 0 
+2ba6acd68000-2ba6ad066000 rw-p 00000000 00:00 0 
+2ba6ad066000-2ba6ad069000 ---p 00000000 00:00 0 
+2ba6ad069000-2ba6ad167000 rw-p 00000000 00:00 0 
+2ba6ad167000-2ba6ad16a000 ---p 00000000 00:00 0 
+2ba6ad16a000-2ba6ad268000 rw-p 00000000 00:00 0 
+2ba6ad268000-2ba6ad26b000 ---p 00000000 00:00 0 
+2ba6ad26b000-2ba6ad569000 rw-p 00000000 00:00 0 
+2ba6ad569000-2ba6ad576000 r-xp 00000000 00:14 70782543                   /tmp/liblz4-java1537956339027888420.so
+2ba6ad576000-2ba6ad775000 ---p 0000d000 00:14 70782543                   /tmp/liblz4-java1537956339027888420.so
+2ba6ad775000-2ba6ad776000 rw-p 0000c000 00:14 70782543                   /tmp/liblz4-java1537956339027888420.so
+2ba6ad7c5000-2ba6ad7c8000 ---p 00000000 00:00 0 
+2ba6ad7c8000-2ba6adcc6000 rw-p 00000000 00:00 0 
+2ba6adcc6000-2ba6adcc9000 ---p 00000000 00:00 0 
+2ba6adcc9000-2ba6addc7000 rw-p 00000000 00:00 0 
+2ba6addc7000-2ba6addca000 ---p 00000000 00:00 0 
+2ba6addca000-2ba6adec8000 rw-p 00000000 00:00 0 
+2ba6adec8000-2ba6adecb000 ---p 00000000 00:00 0 
+2ba6adecb000-2ba6adfc9000 rw-p 00000000 00:00 0 
+2ba6adfc9000-2ba6adfcc000 ---p 00000000 00:00 0 
+2ba6adfcc000-2ba6ae0ca000 rw-p 00000000 00:00 0 
+2ba6ae0ca000-2ba6ae0cd000 ---p 00000000 00:00 0 
+2ba6ae0cd000-2ba6ae1cb000 rw-p 00000000 00:00 0 
+2ba6ae1cb000-2ba6ae1ce000 ---p 00000000 00:00 0 
+2ba6ae1ce000-2ba6ae48c000 rw-p 00000000 00:00 0 
+2ba6ae48c000-2ba6ae4cc000 ---p 00000000 00:00 0 
+2ba6ae4cc000-2ba6ae4cf000 ---p 00000000 00:00 0 
+2ba6ae4cf000-2ba6ae5cd000 rw-p 00000000 00:00 0 
+2ba6ae5cd000-2ba6ae5d0000 ---p 00000000 00:00 0 
+2ba6ae5d0000-2ba6ae6ce000 rw-p 00000000 00:00 0 
+2ba6ae6ce000-2ba6ae6d1000 ---p 00000000 00:00 0 
+2ba6ae6d1000-2ba6ae7cf000 rw-p 00000000 00:00 0 
+2ba6ae7cf000-2ba6ae7d2000 ---p 00000000 00:00 0 
+2ba6ae7d2000-2ba6ae8d0000 rw-p 00000000 00:00 0 
+2ba6ae8d0000-2ba6ae8d3000 ---p 00000000 00:00 0 
+2ba6ae8d3000-2ba6ae9d1000 rw-p 00000000 00:00 0 
+2ba6ae9d1000-2ba6ae9d4000 ---p 00000000 00:00 0 
+2ba6ae9d4000-2ba6aead2000 rw-p 00000000 00:00 0 
+2ba6aead2000-2ba6aead5000 ---p 00000000 00:00 0 
+2ba6aead5000-2ba6aebd3000 rw-p 00000000 00:00 0 
+2ba6aebd3000-2ba6aebd6000 ---p 00000000 00:00 0 
+2ba6aebd6000-2ba6aecd4000 rw-p 00000000 00:00 0 
+2ba6aecd4000-2ba6aecd7000 ---p 00000000 00:00 0 
+2ba6aecd7000-2ba6aedd5000 rw-p 00000000 00:00 0 
+2ba6aedd5000-2ba6aedd8000 ---p 00000000 00:00 0 
+2ba6aedd8000-2ba6aeed6000 rw-p 00000000 00:00 0 
+2ba6aeed6000-2ba6aeed9000 ---p 00000000 00:00 0 
+2ba6aeed9000-2ba6af3d8000 rw-p 00000000 00:00 0 
+2ba6b0000000-2ba6b0021000 rw-p 00000000 00:00 0 
+2ba6b0021000-2ba6b4000000 ---p 00000000 00:00 0 
+2ba6b4000000-2ba6b4021000 rw-p 00000000 00:00 0 
+2ba6b4021000-2ba6b8000000 ---p 00000000 00:00 0 
+2ba6b8000000-2ba6b9318000 rw-p 00000000 00:00 0 
+2ba6b9318000-2ba6bc000000 ---p 00000000 00:00 0 
+2ba6bc000000-2ba6bc021000 rw-p 00000000 00:00 0 
+2ba6bc021000-2ba6c0000000 ---p 00000000 00:00 0 
+2ba6c0000000-2ba6c0021000 rw-p 00000000 00:00 0 
+2ba6c0021000-2ba6c4000000 ---p 00000000 00:00 0 
+2ba6c4000000-2ba6c4037000 rw-p 00000000 00:00 0 
+2ba6c4037000-2ba6c8000000 ---p 00000000 00:00 0 
+2ba6c8000000-2ba6c8021000 rw-p 00000000 00:00 0 
+2ba6c8021000-2ba6cc000000 ---p 00000000 00:00 0 
+2ba6cc000000-2ba6cc021000 rw-p 00000000 00:00 0 
+2ba6cc021000-2ba6d0000000 ---p 00000000 00:00 0 
+2ba6d0000000-2ba6d0021000 rw-p 00000000 00:00 0 
+2ba6d0021000-2ba6d4000000 ---p 00000000 00:00 0 
+2ba6d4000000-2ba6d4021000 rw-p 00000000 00:00 0 
+2ba6d4021000-2ba6d8000000 ---p 00000000 00:00 0 
+2ba6d8000000-2ba6d8021000 rw-p 00000000 00:00 0 
+2ba6d8021000-2ba6dc000000 ---p 00000000 00:00 0 
+2ba6dc000000-2ba6dc021000 rw-p 00000000 00:00 0 
+2ba6dc021000-2ba6e0000000 ---p 00000000 00:00 0 
+2ba6e0000000-2ba6e0021000 rw-p 00000000 00:00 0 
+2ba6e0021000-2ba6e4000000 ---p 00000000 00:00 0 
+2ba6e4000000-2ba6e4021000 rw-p 00000000 00:00 0 
+2ba6e4021000-2ba6e8000000 ---p 00000000 00:00 0 
+2ba6e8000000-2ba6e8021000 rw-p 00000000 00:00 0 
+2ba6e8021000-2ba6ec000000 ---p 00000000 00:00 0 
+2ba6ec000000-2ba6ec021000 rw-p 00000000 00:00 0 
+2ba6ec021000-2ba6f0000000 ---p 00000000 00:00 0 
+2ba6f0000000-2ba6f0021000 rw-p 00000000 00:00 0 
+2ba6f0021000-2ba6f4000000 ---p 00000000 00:00 0 
+2ba6f4000000-2ba6f4021000 rw-p 00000000 00:00 0 
+2ba6f4021000-2ba6f8000000 ---p 00000000 00:00 0 
+2ba6f8000000-2ba6f8021000 rw-p 00000000 00:00 0 
+2ba6f8021000-2ba6fc000000 ---p 00000000 00:00 0 
+2ba6fc000000-2ba6fc021000 rw-p 00000000 00:00 0 
+2ba6fc021000-2ba700000000 ---p 00000000 00:00 0 
+2ba700000000-2ba700021000 rw-p 00000000 00:00 0 
+2ba700021000-2ba704000000 ---p 00000000 00:00 0 
+2ba704000000-2ba704021000 rw-p 00000000 00:00 0 
+2ba704021000-2ba708000000 ---p 00000000 00:00 0 
+2ba708000000-2ba708021000 rw-p 00000000 00:00 0 
+2ba708021000-2ba70c000000 ---p 00000000 00:00 0 
+2ba70c000000-2ba70c021000 rw-p 00000000 00:00 0 
+2ba70c021000-2ba710000000 ---p 00000000 00:00 0 
+2ba710000000-2ba710021000 rw-p 00000000 00:00 0 
+2ba710021000-2ba714000000 ---p 00000000 00:00 0 
+2ba714000000-2ba714021000 rw-p 00000000 00:00 0 
+2ba714021000-2ba718000000 ---p 00000000 00:00 0 
+2ba718000000-2ba718021000 rw-p 00000000 00:00 0 
+2ba718021000-2ba71c000000 ---p 00000000 00:00 0 
+2ba71c000000-2ba71c021000 rw-p 00000000 00:00 0 
+2ba71c021000-2ba720000000 ---p 00000000 00:00 0 
+2ba720000000-2ba720021000 rw-p 00000000 00:00 0 
+2ba720021000-2ba724000000 ---p 00000000 00:00 0 
+2ba724000000-2ba724021000 rw-p 00000000 00:00 0 
+2ba724021000-2ba728000000 ---p 00000000 00:00 0 
+2ba728000000-2ba728021000 rw-p 00000000 00:00 0 
+2ba728021000-2ba72c000000 ---p 00000000 00:00 0 
+2ba72c000000-2ba72c021000 rw-p 00000000 00:00 0 
+2ba72c021000-2ba730000000 ---p 00000000 00:00 0 
+2ba730000000-2ba730021000 rw-p 00000000 00:00 0 
+2ba730021000-2ba734000000 ---p 00000000 00:00 0 
+2ba734000000-2ba734021000 rw-p 00000000 00:00 0 
+2ba734021000-2ba738000000 ---p 00000000 00:00 0 
+2ba738000000-2ba738021000 rw-p 00000000 00:00 0 
+2ba738021000-2ba73c000000 ---p 00000000 00:00 0 
+2ba73c000000-2ba73c021000 rw-p 00000000 00:00 0 
+2ba73c021000-2ba740000000 ---p 00000000 00:00 0 
+2ba740000000-2ba740021000 rw-p 00000000 00:00 0 
+2ba740021000-2ba744000000 ---p 00000000 00:00 0 
+2ba744000000-2ba744021000 rw-p 00000000 00:00 0 
+2ba744021000-2ba748000000 ---p 00000000 00:00 0 
+2ba748000000-2ba748021000 rw-p 00000000 00:00 0 
+2ba748021000-2ba74c000000 ---p 00000000 00:00 0 
+2ba74c000000-2ba74c021000 rw-p 00000000 00:00 0 
+2ba74c021000-2ba750000000 ---p 00000000 00:00 0 
+2ba750000000-2ba750021000 rw-p 00000000 00:00 0 
+2ba750021000-2ba754000000 ---p 00000000 00:00 0 
+2ba754000000-2ba754021000 rw-p 00000000 00:00 0 
+2ba754021000-2ba758000000 ---p 00000000 00:00 0 
+2ba758000000-2ba758021000 rw-p 00000000 00:00 0 
+2ba758021000-2ba75c000000 ---p 00000000 00:00 0 
+2ba75c000000-2ba75c021000 rw-p 00000000 00:00 0 
+2ba75c021000-2ba760000000 ---p 00000000 00:00 0 
+2ba760000000-2ba760021000 rw-p 00000000 00:00 0 
+2ba760021000-2ba764000000 ---p 00000000 00:00 0 
+2ba764000000-2ba76404e000 rw-p 00000000 00:00 0 
+2ba76404e000-2ba768000000 ---p 00000000 00:00 0 
+2ba768000000-2ba768021000 rw-p 00000000 00:00 0 
+2ba768021000-2ba76c000000 ---p 00000000 00:00 0 
+2ba76c000000-2ba76c021000 rw-p 00000000 00:00 0 
+2ba76c021000-2ba770000000 ---p 00000000 00:00 0 
+2ba770000000-2ba770021000 rw-p 00000000 00:00 0 
+2ba770021000-2ba774000000 ---p 00000000 00:00 0 
+2ba774000000-2ba774021000 rw-p 00000000 00:00 0 
+2ba774021000-2ba778000000 ---p 00000000 00:00 0 
+2ba778000000-2ba778051000 rw-p 00000000 00:00 0 
+2ba778051000-2ba77c000000 ---p 00000000 00:00 0 
+2ba77c000000-2ba77c021000 rw-p 00000000 00:00 0 
+2ba77c021000-2ba780000000 ---p 00000000 00:00 0 
+2ba780000000-2ba780043000 rw-p 00000000 00:00 0 
+2ba780043000-2ba784000000 ---p 00000000 00:00 0 
+2ba784000000-2ba784021000 rw-p 00000000 00:00 0 
+2ba784021000-2ba788000000 ---p 00000000 00:00 0 
+2ba788000000-2ba788021000 rw-p 00000000 00:00 0 
+2ba788021000-2ba78c000000 ---p 00000000 00:00 0 
+2ba78c000000-2ba78c021000 rw-p 00000000 00:00 0 
+2ba78c021000-2ba790000000 ---p 00000000 00:00 0 
+2ba790000000-2ba790021000 rw-p 00000000 00:00 0 
+2ba790021000-2ba794000000 ---p 00000000 00:00 0 
+2ba794000000-2ba794021000 rw-p 00000000 00:00 0 
+2ba794021000-2ba798000000 ---p 00000000 00:00 0 
+2ba798000000-2ba798021000 rw-p 00000000 00:00 0 
+2ba798021000-2ba79c000000 ---p 00000000 00:00 0 
+2ba79c000000-2ba79c021000 rw-p 00000000 00:00 0 
+2ba79c021000-2ba7a0000000 ---p 00000000 00:00 0 
+2ba7a0000000-2ba7a0021000 rw-p 00000000 00:00 0 
+2ba7a0021000-2ba7a4000000 ---p 00000000 00:00 0 
+2ba7a4000000-2ba7a4021000 rw-p 00000000 00:00 0 
+2ba7a4021000-2ba7a8000000 ---p 00000000 00:00 0 
+2ba7a8000000-2ba7a802a000 rw-p 00000000 00:00 0 
+2ba7a802a000-2ba7ac000000 ---p 00000000 00:00 0 
+2ba7ac000000-2ba7ac021000 rw-p 00000000 00:00 0 
+2ba7ac021000-2ba7b0000000 ---p 00000000 00:00 0 
+2ba7b0000000-2ba7b0021000 rw-p 00000000 00:00 0 
+2ba7b0021000-2ba7b4000000 ---p 00000000 00:00 0 
+2ba7b4000000-2ba7b4021000 rw-p 00000000 00:00 0 
+2ba7b4021000-2ba7b8000000 ---p 00000000 00:00 0 
+2ba7b8000000-2ba7b8021000 rw-p 00000000 00:00 0 
+2ba7b8021000-2ba7bc000000 ---p 00000000 00:00 0 
+2ba7bc000000-2ba7bc021000 rw-p 00000000 00:00 0 
+2ba7bc021000-2ba7c0000000 ---p 00000000 00:00 0 
+2ba7c0000000-2ba7c0021000 rw-p 00000000 00:00 0 
+2ba7c0021000-2ba7c4000000 ---p 00000000 00:00 0 
+7ffdef17b000-7ffdef198000 rw-p 00000000 00:00 0                          [stack]
+7ffdef1d8000-7ffdef1d9000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx1g 
+java_command: org.apache.spark.deploy.SparkSubmit pyspark-shell
+java_class_path (initial): /sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/conf/:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/parquet-column-1.8.2.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/kryo-shaded-3.0.3.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jackson-jaxrs-1.9.13.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/commons-configuration-1.6.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/scala-parser-combinators_2.11-1.0.4.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-sketch_2.11-2.2.0.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-core-2.6.5.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/mail-1.4.7.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/spark-mllib-local_2.11-2.2.0.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/super-csv-2.2.0.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/zookeeper-3.4.6.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/bonecp-0.8.0.RELEASE.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/antlr-runtime-3.4.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/hadoop-mapreduce-client-common-2.6.5.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/calcite-core-1.2.0-incubating.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/JavaEWAH-0.3.2.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Python-3.5.2/jars/jersey-common-2.22.2.jar:/sw/eb/software/Spark/2.2.0-intel-2017A-Hadoop-2.6-Java-1.8.0-Pytho
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/sw/eb/software/JDK/1.8.0_181
+SHELL=/bin/bash
+HOSTTYPE=X86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xad2a40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xad2a40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x92a610], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x92a610], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x92a610], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x92a610], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x92be70], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: [libjvm.so+0x92d270], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x92d270], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:CentOS release 6.10 (Final)
+
+uname:Linux 2.6.32-754.35.1.el6.x86_64 #1 SMP Sat Nov 7 12:42:14 UTC 2020 x86_64
+libc:glibc 2.12 NPTL 2.12 
+rlimit: STACK infinity, CORE infinity, NPROC 258007, NOFILE 8192, AS infinity
+load average:27.51 27.54 27.55
+
+/proc/meminfo:
+MemTotal:       66076444 kB
+MemFree:        49820200 kB
+Buffers:          190408 kB
+Cached:          3810584 kB
+SwapCached:            0 kB
+Active:          4861052 kB
+Inactive:        2752296 kB
+Active(anon):    4097984 kB
+Inactive(anon):  1611936 kB
+Active(file):     763068 kB
+Inactive(file):  1140360 kB
+Unevictable:     4194304 kB
+Mlocked:            8192 kB
+SwapTotal:      78124976 kB
+SwapFree:       78120120 kB
+Dirty:            292856 kB
+Writeback:             0 kB
+AnonPages:       7857428 kB
+Mapped:           206332 kB
+Shmem:           2097568 kB
+Slab:            1785828 kB
+SReclaimable:     141288 kB
+SUnreclaim:      1644540 kB
+KernelStack:       25216 kB
+PageTables:        25492 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    111163196 kB
+Committed_AS:   61513172 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      593828 kB
+VmallocChunk:   34323950060 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   7360512 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:        4104 kB
+DirectMap2M:     2072576 kB
+DirectMap1G:    65011712 kB
+
+
+CPU:total 40 (initial active 20) (10 cores per cpu, 2 threads per core) family 6 model 62 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 0
+cpu cores	: 10
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 1
+cpu cores	: 10
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 2
+cpu cores	: 10
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 3
+cpu cores	: 10
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 4
+cpu cores	: 10
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 8
+cpu cores	: 10
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 9
+cpu cores	: 10
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 10
+cpu cores	: 10
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 11
+cpu cores	: 10
+apicid		: 22
+initial apicid	: 22
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 12
+cpu cores	: 10
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.92
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 0
+cpu cores	: 10
+apicid		: 32
+initial apicid	: 32
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 1
+cpu cores	: 10
+apicid		: 34
+initial apicid	: 34
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 2
+cpu cores	: 10
+apicid		: 36
+initial apicid	: 36
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 3
+cpu cores	: 10
+apicid		: 38
+initial apicid	: 38
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 4
+cpu cores	: 10
+apicid		: 40
+initial apicid	: 40
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 8
+cpu cores	: 10
+apicid		: 48
+initial apicid	: 48
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 16
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 9
+cpu cores	: 10
+apicid		: 50
+initial apicid	: 50
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 17
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 10
+cpu cores	: 10
+apicid		: 52
+initial apicid	: 52
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 18
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 11
+cpu cores	: 10
+apicid		: 54
+initial apicid	: 54
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 19
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 1069
+cpu MHz		: 2501.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 12
+cpu cores	: 10
+apicid		: 56
+initial apicid	: 56
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm ssbd pti retpoline ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms flush_l1d
+bogomips	: 4987.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 66076444k(49820572k free), swap 78124976k(78120120k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.181-b13) for linux-amd64 JRE (1.8.0_181-b13), built on Jul  7 2018 00:56:38 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Tue Apr  6 12:20:35 2021
+elapsed time: 1227 seconds (0d 0h 20m 27s)
+

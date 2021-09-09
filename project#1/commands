@@ -1,0 +1,6 @@
+python -m pip install --user boto3
+pip install azure-storage-blob
+pip install google-cloud-storage
+pip install cloudstorage
+export GOOGLE_APPLICATION_CREDENTIALS="gcp-credential.json"
+PYTHONPATH=$PWD/lib python NAS.py
